@@ -4,6 +4,7 @@ const port = 4000;
 const expressHbs = require("express-handlebars");
 
 app.use(express.static(__dirname + "/html"));
+app.use(express.static(__dirname + "/views"));
 
 app.engine(
   "hbs",
@@ -42,4 +43,6 @@ app.get("/createTables", (req, res) => {
   });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(process.env.PORT || port, () =>
+  console.log(`Example app listening on port ${port}`)
+);
