@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000 | process.env.PORT;
+const port = 4000;
 const expressHbs = require("express-handlebars");
 
 app.use(express.static(__dirname + "/html"));
